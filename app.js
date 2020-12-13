@@ -1,5 +1,5 @@
 const spinnerLoading = document.querySelector('#loading');
-const countDownContainer = document.querySelector('#countdown');
+const countdownContainer = document.querySelector('#countdown');
 
 const yearContainer = document.querySelector('#year');
 const daysContainer = document.querySelector('#days');
@@ -29,12 +29,12 @@ const updateCountDown = () => {
     const minutes = Math.floor(diffence / 1000 / 60) % 60;
     const seconds = Math.floor(diffence / 1000) % 60;
 
-    insertCountdownValues({ days, hours, minutes, seconds })
+    insertCountdownValues({ days, hours, minutes, seconds });
 };
 
 const handleCountdownDisplay = () => {
     spinnerLoading.remove();
-    countDownContainer.style.display =  'flex';
+    countdownContainer.style.display =  'flex';
 };
 
 setTimeout(handleCountdownDisplay, 1000);
