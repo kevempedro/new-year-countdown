@@ -21,7 +21,7 @@ const insertCountdownValues = ({ days, hours, minutes, seconds }) => {
     secondsContainer.textContent = getTimeUnit(seconds);
 };
 
-const updateCountDown = () => {
+const updateCountdown = () => {
     const currenteDate = new Date();
     const diffence = newYearTime - currenteDate;
     const days = Math.floor(diffence / 1000 / 60 / 60 / 24);
@@ -39,4 +39,4 @@ const handleCountdownDisplay = () => {
 
 setTimeout(handleCountdownDisplay, 1000);
 
-setInterval(updateCountDown, 1000);
+setInterval(updateCountdown, 1000);
